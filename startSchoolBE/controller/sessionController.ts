@@ -63,7 +63,7 @@ export const createNewSchoolSession = async (
     if (school && school.schoolName) {
       for (let i of students!) {
         totalStudent++;
-        if (i.feesPaid) {
+        if (i.feesPaid1st || i.feesPaid2nd || i.feesPaid2nd) {
           paid++;
           await studentModel.findByIdAndUpdate(
             i?._id,
